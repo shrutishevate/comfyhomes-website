@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Sofa Shopping</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color:white;
+        }
+        .navbar{
+    
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    height: 10vh;
+    width: 100%;
+    margin: auto;
+  background-color:white;
+    
+
+   
+}
+
+.navbar .navlist{
+    display:flex;
+    gap:3rem;
+   
+}
+.navbar a:hover{
+    
+    color:black;
+
+}
+.navbar li a:hover{
+   color:rgb(239, 12, 12);
+   
+}
+.navbar .logo{
+    color:black;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-left: 3cm;
+
+}
+.navlist li{
+
+    list-style: none;
+
+}
+.navlist a{
+    text-decoration: none;
+    font-size: 1.1rem;
+    color:black;
+    margin-right: 4px;
+    
+}
+.dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #fff;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            z-index: 1;
+            opacity: 0;
+            transform: translateY(-20px);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .dropdown-content a {
+            display: block;
+            padding: 10px;
+            color: #333;
+            text-decoration: none;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #007BFF;
+            color: #fff;
+        }
+
+
+        
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+           
+        }
+                
+        .container h1{
+            text-align: center;
+            text-transform:capitalize;
+        }
+        .container h1::after{
+    content: "";
+    position: absolute;
+    width:32cm;
+    height: 4px;
+    display: block;
+    margin:0 auto;
+    background-color:greenyellow;
+    margin-bottom: none;
+
+        }
+        .product {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+           
+        }
+
+        .product-item {
+            width: 22%;
+            max-width: 200px; 
+            margin: 10px;
+            padding: 20px;
+            background-color:white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+           
+        }
+        
+
+        .product-img {
+            width: 100%;
+            height: auto;
+        }
+
+        .product-description {
+            margin-top: 10px;
+           
+        }
+
+        .product-price {
+            font-weight: bold;
+            color: #333;
+        }
+
+       
+
+        .shop-now-btn {
+            display: block;
+            margin-top: 10px;
+            padding: 8px 15px;
+            background-color: #4caf50;
+            color: #fff;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+        }
+     
+      .star{
+        color:#ffa03b;
+        font-size:xx-small;
+        display:flex;
+        
+      }
+
+      footer{
+    margin-top: 6rem;
+    text-align: center;
+    background-color: black;
+    color:white;
+    text-align: center;
+   justify-content: center;
+   font-family: 'Courier New', Courier, monospace;
+   font-weight: 100;
+   margin-bottom: auto;
+
+    
+}
+
+.fa {
+    padding: 5px;
+    font-size: 30px;
+    width: 40px;
+    text-align: center;
+    text-decoration: none;
+    margin: 2px 2px;
+  }
+  .fa:hover {
+    opacity: 0.3;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+.fa-instagram {
+    background:rgb(157, 36, 143);
+    color: white;
+}
+.fa-linkedin {
+    background: #007bb5;
+    color: white;
+  }
+    
+    .fa-twitter {
+      background: #55ACEE;
+      color: white;
+    }
+    .fa-linkedin {
+        background: #007bb5;
+        color: white;
+      }
+      
+      .shop-now-btn:hover{
+        background-color:red;
+        color:white;
+
+      }
+      .fa-cart-arrow-down:hover{
+        color: red;
+
+      }
+  
+      
+
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="navbar">
+            <div class="logo">ComfyHomes</div>
+            <ul class="navlist">
+                <li class="active"><a href="comfy.html"><i class="fa fa-home" aria-hidden="true"></i> Homes</a></li>
+                <li class="dropdown">
+                    <a href="#"><i class="fa fa-angle-down" aria-hidden="true"></i>Product</a>
+                    <div class="dropdown-content">
+                        <a href="bed.html">Bed</a>
+                        <a href="sofa.html">Sofa</a>
+                        <a href="chair.html">Chair</a>
+                        <a href="diningtable.html">Dining Table</a>
+                        <a href="cabinet.html">Cabinet </a>
+                        <a href="coffee.html">Coffeetable</a>
+                        <a href="woodenshelves.html">woodenshelves</a>
+                    </div>
+                </li>
+                <li><a href="blog.html"><i class="fa fa-rss-square" aria-hidden="true"></i>Blog</a></li>
+                <li><a href="about.html"><i class="fa fa-info" aria-hidden="true"></i>About Us</a></li>
+            </ul>
+        </div>
+    </div>
+
+<div class="container">
+    <h1>Cebinet Collection</h1>
+    
+    <div class="product">
+        <!-- Product 1 -->
+        <div class="product-item">
+            <img src="cebinet1.jpg" alt="Sofa 1" class="product-img">
+            <div class="product-description">Wooden Elegance Cabinet</div>
+            <div class="product-price"> &#8377;16000<i class="fa fa-cart-arrow-down" aria-hidden="true"></i></div>
+           <div class="star"><span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span></div>
+            <a href="#" class="shop-now-btn">Shop Now</a>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product-item">
+            <img src="cebinet12.jpg" alt="Sofa 2" class="product-img">
+            <div class="product-description">Wooden  Harmony CupBoard</div>
+            <div class="product-price">&#8377;17467<i class="fa fa-cart-arrow-down" aria-hidden="true"></i></div>
+            <div class="star"><span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <i class="fa fa-star-half-o" aria-hidden="true"></i>
+            </div>
+            <a href="#" class="shop-now-btn">Shop Now</a>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product-item">
+            <img src="cebinet2.jpg" alt="Sofa 3" class="product-img">
+            <div class="product-description">crest cabinet</div>
+            <div class="product-price">&#8377; 19565<i class="fa fa-cart-arrow-down" aria-hidden="true"></i></div>
+            <div class="star"><span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star-half-o"></span></div>
+            <a href="#" class="shop-now-btn">Shop Now</a>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product-item">
+            <img src="cebinet4.jpg" alt="Sofa 4" class="product-img">
+            <div class="product-description">Vintage Vslor Armoire</div>
+            <div class="product-price">&#8377;25000<i class="fa fa-cart-arrow-down" aria-hidden="true"></i></div>
+            <div class="star"><span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star-o"></span></div>
+            <a href="#" class="shop-now-btn">Shop Now</a>
+        </div>
+
+        <!-- Product 5 -->
+        <div class="product-item">
+            <img src="cebinet5.jpg" alt="Sofa 5" class="product-img">
+            <div class="product-description">Harmony Valor</div>
+            <div class="product-price">&#8377;28769<i class="fa fa-cart-arrow-down" aria-hidden="true"></i></div>
+            <div class="star"><span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span></div>
+            <a href="#" class="shop-now-btn">Shop Now</a>
+        </div>
+
+        <!-- Product 6 -->
+        <div class="product-item">
+            <img src="cebinet6.jpg" alt="Sofa 6" class="product-img">
+            <div class="product-description">Regal Reflection cabinet</div>
+            <div class="product-price">&#8377;25868<i class="fa fa-cart-arrow-down" aria-hidden="true"></i></div>
+            <div class="star"><span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star-half-o"></span></div>
+            <a href="#" class="shop-now-btn">Shop Now</a>
+        </div>
+
+        <!-- Product 7 -->
+        <div class="product-item">
+            <img src="cebinet7.jpg" alt="Sofa 7" class="product-img">
+            <div class="product-description">Sleek Serenity Cabinet</div>
+            <div class="product-price">&#8377; 6897<i class="fa fa-cart-arrow-down" aria-hidden="true"></i></div>
+            <div class="star"><span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star-o"></span></div>
+            <a href="#" class="shop-now-btn">Shop Now</a>
+        </div>
+
+        <!-- Product 8 -->
+        <div class="product-item">
+            <img src="cebinet8.jpg" alt="Sofa 8" class="product-img">
+            <div class="product-description">Coastal Charm Cebinet</div>
+            <div class="product-price">&#8377;14000<i class="fa fa-cart-arrow-down" aria-hidden="true"></i></div>
+            <div class="star"><span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star-o"></span></div>
+            <a href="#" class="shop-now-btn">Shop Now</a>
+        </div>
+        <!--product 9-->
+        <div class="product-item">
+            <img src="cebinet9.jpg" alt="Sofa 8" class="product-img">
+            <div class="product-description">Urban Luxe Cabinet</div>
+            <div class="product-price">&#8377;24769<i class="fa fa-cart-arrow-down" aria-hidden="true"></i></div>
+            <div class="star"><span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star-o"></span></div>
+            <a href="#" class="shop-now-btn">Shop Now</a>
+        </div>
+        <!--product 10-->
+
+        <div class="product-item">
+            <img src="cebinet10.jpg" alt="Sofa 8" class="product-img">
+            <div class="product-description">Tranquil Tides Caninet</div>
+            <div class="product-price">&#8377;19000<i class="fa fa-cart-arrow-down" aria-hidden="true"></i></div>
+            <div class="star"><span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star-o"></span></div>
+            <a href="#" class="shop-now-btn">Shop Now</a>
+        </div>
+
+          <!--product 11-->
+        <div class="product-item">
+            <img src="cebinet11.jpg"class="product-img">
+            <div class="product-description">Tranquility caninet</div>
+            <div class="product-price">&#8377;12000<i class="fa fa-cart-arrow-down" aria-hidden="true"></i></div>
+            <div class="star"><span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star-o"></span></div> 
+            <a href="#" class="shop-now-btn">Shop Now</a>
+        </div>
+           <!--product 12-->
+        <div class="product-item">
+            <img src="cebinet3.jpg" alt="" class="product-img">
+            <div class="product-description">Rustic Reverire cebinet</div>
+            <div class="product-price">&#8377;23558<i class="fa fa-cart-arrow-down" aria-hidden="true"></i></div>
+            <div class="star"><span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star-half-o"></span>
+                <span class="fa fa-star-o"></span></div>
+            <a href="#" class="shop-now-btn">Shop Now</a>
+        </div>
+    </div>
+</div>
+<footer>
+    <div class="footer-content">
+     Made With &hearts; By Comfyhomes
+     <br>
+     <p>"Transforming spaces,crafting comfort"</p>
+     <p>Contect us: +91 9482749234/+91 9573727468</p>
+     <p>Email:comfyhomes@gmail.com</p>
+     
+    </div>
+ <p>Like What You See? Follow Us Here.</p>
+   <a href="#" class="fa fa-instagram"></a>
+         <a href="#" class="fa fa-facebook"></a>
+         <a href="#" class="fa fa-twitter"></a>
+        <a href="#" class="fa fa-linkedin"></a>
+    
+
+    
+    <div class="footer-bottom">
+     <p>&copy; ComfyHomes . All rights reserved.
+     </p>
+
+    </div>
+
+ </footer>
+
+
+</body>
+</html>

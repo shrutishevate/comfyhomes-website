@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ComfyHomes</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.navbar{
+    
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    height: 10vh;
+    width: 100%;
+    margin: auto;
+   
+   
+    
+    
+   
+}
+.navbar .navlist{
+    display:flex;
+    gap:3rem;
+   
+}
+.navbar a:hover{
+    
+    color:black;
+
+}
+.navbar li a:hover{
+   color:rgb(239, 12, 12);
+   
+}
+.navbar .logo{
+    color:black;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-left: 3cm;
+
+}
+.navlist li{
+
+    list-style: none;
+
+}
+.navlist a{
+    text-decoration: none;
+    font-size: 1.1rem;
+    color:black;
+    margin-right: 4px;
+    
+}
+
+
+
+.hello {
+   
+    display:flex;
+    height: calc(100vh- 12vh);
+    align-items: center;
+    width: 98%;
+    margin: auto;
+    margin-left: 1.5cm;
+
+}
+.hello .content{
+    flex: 1;
+    text-decoration: none;
+}
+
+.content h1{
+    color:#ef7204;
+    font-size: 2.5rem;
+    line-height: 3.1rem;
+    text-transform: capitalize;/*caital letter*/
+}
+.content p{
+    color:black;
+    font-size: 1.1rem;
+    max-width: 85%;
+    margin: 1.84rem 0;
+}
+.content button{
+    background-color: rgb(19,19,37);
+    color: white;
+    font-size: 1.3rem;
+    padding: 1rem 2rem;
+    border:none;
+    transition:  .5 ease-in-out;
+    text-decoration: none;
+    outline: none;
+    
+
+}
+/*hover is used to change the background color of button*/
+.content button:hover{
+    background-color: red;
+    cursor: pointer;
+    color: white;
+    text-decoration:none;
+}
+.content button a:hover{
+    color: white;
+    text-decoration: none;
+}
+
+
+
+
+footer{
+   
+    text-align: center;
+    color:white;
+    text-align: center;
+   justify-content: center;
+   font-family: 'Courier New', Courier, monospace;
+   font-weight: 100;
+   margin-bottom: auto;
+   background-color: black;
+
+    
+}
+
+.fa {
+    
+    font-size: 30px;
+    width: 40px;
+    text-align: center;
+    text-decoration: none;
+    margin: 2px 2px;
+  }
+  .fa:hover {
+    opacity: 0.3;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+.fa-instagram {
+    background:rgb(242, 6, 218);
+    color: white;
+}
+.fa-linkedin {
+    background: #007bb5;
+    color: white;
+  }
+    
+    .fa-twitter {
+      background: #55ACEE;
+      color: white;
+    }
+    .fa-linkedin {
+        background: #007bb5;
+        color: white;
+      }
+      
+
+body{
+    background-image: url(back.jpg);
+    background-size: auto;
+  
+}
+.image{
+    height: 17cm;
+    width: 15cm;
+    background-image: url(sofa.jpg);
+    background-size: cover;
+
+}
+.navbar li a:hover .dropdown {
+    display: block;
+    position: absolute;
+    margin-top: 15px;
+    margin-left: 15px;
+}
+
+.navbar li a:hover .dropdown ul {
+    display: block;
+    margin: 10px;
+}
+
+.navbar li a:hover .dropdown ul li {
+    width: 150px;
+    padding: 10px;
+    border-bottom: 1px dotted #666;
+    background: transparent;
+    border-radius: 0;
+    text-align: left;
+}
+
+.navbar li a:hover .dropdown ul li:last-child {
+    border-bottom: none;
+}
+
+.navbar li a:hover .dropdown ul li a:hover {
+    color: red;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+    </style>
+
+</head>
+<body>
+    <header>
+       
+        <div class="navbar">
+            <div class="logo">ComfyHomes</div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+            
+                <ul class="navlist">
+                    <li class="active"><a href="#"><i class="fa fa-home" aria-hidden="true"></i> Homes</a></li>
+                    <li><a href="#"><i class="fa fa-angle-down" aria-hidden="true"></i>Product</a>
+                    <div class="dropdown">
+                        <ul>
+                            <li>Sofa</li>
+                            <li>Chair</li>
+                            <li>Coffee Table</li></ul>
+                    </div>
+                    </li>
+                    <li><a href="#"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i>cart</a></li>
+                    <li><a href="hh.html"><i class="fa fa-info" aria-hidden="true"></i>About Us</a></li>
+                   
+                </ul>
+                </div>
+                
+           
+        </div>
+        <section class="hello">
+            <div class="content">
+                <h1>Furniture That Speeks Of Style And Comfort</h1>
+                <p>Unleash your inner artist as we embark on a journey into the world of furniture design  and craftsmanship. Discover the intersection of art and functionality in every piece.</p>
+                <button>Discover More</a></button>
+            </div>
+           
+           <div class="image">
+             </div>
+
+
+        </section>
+        
+        
+    </header>
+    <footer>
+        <div class="footer-content">
+         Made With &hearts; By Comfyhomes
+         <br>
+         <p>"Transforming spaces,crafting comfort"</p>
+         <p>Contect us: +91 9482749234/+91 9573727468</p>
+         <p>Email:comfyhomes@gmail.com</p>
+         
+        </div>
+     <p>Like What You See? Follow Us Here.</p>
+       <a href="#" class="fa fa-instagram"></a>
+             <a href="#" class="fa fa-facebook"></a>
+             <a href="#" class="fa fa-twitter"></a>
+            <a href="#" class="fa fa-linkedin"></a>
+        
+
+        
+        <div class="footer-bottom">
+         <p>&copy; 2023 comfyhomes
+         </p>
+
+        </div>
+
+     </footer>
+
+    
+         
+</body>
+</html>

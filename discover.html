@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Showcase</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family:'Poppins', sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        .product-container {
+            display: flex;
+            margin: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-image {
+            flex: 1;
+            text-align: center;
+            padding: 20px;
+            background-color: #fff;
+        }
+
+        .product-image img {
+            max-width: 50%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-details {
+            flex: 1;
+            padding: 20px;
+            background-color: #fff;
+            overflow-y: auto;
+        }
+
+        h2, .price, .offers {
+            margin-bottom: 15px;
+        }
+
+        .price {
+            font-size: 1.5rem;
+            color: #B12704; /* Amazon's price color */
+            text-decoration: line-through;
+            margin-bottom: 5px;
+        }
+
+        .discount, .new-price {
+            font-size: 1.2rem;
+            color: #0A8F08; /* Discount color */
+            margin-bottom: 5px;
+        }
+
+        .new-price {
+            font-size: 1.5rem;
+            color: #B12704; /* Amazon's price color */
+            margin-bottom: 10px;
+        }
+
+        .offers {
+            font-weight: bold;
+            font-size: 1.2rem;
+            color: #ff6600; /* Attractive color for offers title */
+            margin-bottom: 5px;
+        }
+
+        .cart-icon {
+            color: #007BFF; /* Cart icon color */
+            font-size: 1.5rem;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+        .scrollable {
+            max-height: 200px;
+            overflow-y: auto;
+            padding-right: 10px; /* Create space for the scrollbar */
+        }
+        .navbar{
+    
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    height: 10vh;
+    width: 100%;
+    margin: auto;
+    background-color:white;
+   
+    
+    
+   
+}
+.navbar .navlist{
+    display:flex;
+    gap:3rem;
+   
+}
+.navbar a:hover{
+    
+    color:black;
+
+}
+.navbar li a:hover{
+   color:rgb(239, 12, 12);
+   
+}
+.navbar .logo{
+    color:black;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-left: 3cm;
+
+}
+.navlist li{
+
+    list-style: none;
+
+}
+.navlist a{
+    text-decoration: none;
+    font-size: 1.1rem;
+    color:black;
+    margin-right: 4px;
+    
+}
+.dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #fff;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            z-index: 1;
+            opacity: 0;
+            transform: translateY(-20px);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .dropdown-content a {
+            display: block;
+            padding: 10px;
+            color: #333;
+            text-decoration: none;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #007BFF;
+            color: #fff;
+        }
+        footer{
+    margin-top: 6rem;
+    text-align: center;
+    background-color: black;
+    color:white;
+    text-align: center;
+   justify-content: center;
+   font-family: 'Courier New', Courier, monospace;
+   font-weight: 100;
+   margin-bottom: auto;
+
+    
+}
+
+.fa {
+    padding: 5px;
+    font-size: 30px;
+    width: 40px;
+    text-align: center;
+    text-decoration: none;
+    margin: 2px 2px;
+  }
+  .fa:hover {
+    opacity: 0.3;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+.fa-instagram {
+    background:rgb(157, 36, 143);
+    color: white;
+}
+.fa-linkedin {
+    background: #007bb5;
+    color: white;
+  }
+    
+    .fa-twitter {
+      background: #55ACEE;
+      color: white;
+    }
+    .fa-linkedin {
+        background: #007bb5;
+        color: white;
+      }
+      
+
+    </style>
+</head>
+<header>
+       
+    <div class="navbar">
+        <div class="logo">ComfyHomes</div>
+        <ul class="navlist">
+            <li class="active"><a href="comfy.html"><i class="fa fa-home" aria-hidden="true"></i> Homes</a></li>
+            <li class="dropdown">
+                <a href="#"><i class="fa fa-angle-down" aria-hidden="true"></i>Product</a>
+                <div class="dropdown-content">
+                    <a href="bed.html">Bed</a>
+                    <a href="sofa.html">Sofa</a>
+                    <a href="chair.html">Chair</a>
+                    <a href="diningtable.html">Dining Table</a>
+                    <a href="cabinet.html">Cabinet </a>
+                    <a href="coffee.html">Coffeetable</a>
+                    <a href="woodenshelves.html">woodenshelves</a>
+                </div>
+            </li>
+            <li><a href="blog.html"><i class="fa fa-rss-square" aria-hidden="true"></i>Blog</a></li>
+            <li><a href="about.html"><i class="fa fa-info" aria-hidden="true"></i>About Us</a></li>
+        </ul>
+    </div>
+<body>
+
+    <!-- Product 1 -->
+    <div class="sofa-container product-container">
+        <div class="couch-image product-image">
+            <img src="sofa5.jpg" alt="Sofa">
+            <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+        </div>
+        <div class="couch-details product-details">
+            <h2>Sofa</h2>
+            <p class="price">&#8377;20000</p>
+            <p class="new-price">&#8377;18000</p>
+            <p class="discount">50% off</p>
+            <div class="offers">Special Offers</div>
+            <div class="scrollable">
+                <p>Free shipping on this exquisite sofa! Limited time offer.</p>
+                <p>Meet "Luxora," our exquisite sofa designed for ultimate comfort and sophistication. With plush cushions and a contemporary silhouette, Luxora elevates your living space. The premium upholstery ensures both style and durability, while the generous seating invites you to unwind in luxury. Make a statement with Luxora – where comfort meets elegance.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Product 2 -->
+    <div class="coffeetable-container product-container">
+        <div class="coffeetable-image product-image">
+            <img src="coffeetable.jpg" alt="Coffee Table">
+            <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+        </div>
+        <div class="product-details">
+            <h2>Coffee Table</h2>
+            <p class="price">&#8377;15000</p>
+            <p class="new-price">&#8377;12000</p>
+            <p class="discount">20% off</p>
+            <div class="offers">Special Offers</div>
+            <div class="scrollable">
+                <p>Get an additional 10% off for a limited time. Hurry, shop now!</p>
+                <p>Introducing our elegant coffee table – a perfect blend of style and functionality. Crafted with precision, the sleek design seamlessly integrates into any living space. The durable wooden frame ensures longevity, while the spacious tabletop offers ample room for your favorite books, decor, or a cup of coffee. Enhance your home's aesthetic with this timeless addition that combines form and utility.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Product 3 -->
+    <div class="chair-container product-container">
+        <div class="chair-image product-image">
+            <img src="chair.jpg" alt="Chair">
+            <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+        </div>
+        <div class="product-details">
+            <h2>Chair</h2>
+            <p class="price"> &#8377;10000 </p>
+            <p class="new-price">&#8377;8000</p>
+            <p class="discount">30% off</p>
+            <div class="offers">Special Offers</div>
+            <div class="scrollable">
+                <p>Buy one chair and get the second one at 50% off. Limited stock!</p>
+                <p>Introducing the "TimberCraft" wooden chair – a timeless addition to your home. Meticulously crafted from solid wood, this chair exudes natural beauty and durability. Its ergonomic design ensures comfort, while the rich wood finish adds warmth to any room. Whether as a standalone piece or part of a set, the TimberCraft chair brings a touch of rustic charm and quality craftsmanship to your living space.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Product 4 -->
+    <div class="studytable-container product-container">
+        <div class="studytable-image product-image">
+            <img src="study table.jpg" alt="StudyTable">
+            <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+        </div>
+        <div class="product-details">
+            <h2>StudyTable</h2>
+            <p class="price">&#8377;14000 </p>
+            <p class="new-price">&#8377;11000</p>
+            <p class="discount">30% off</p>
+            <div class="offers">Special Offers</div>
+            <div class="scrollable">
+                <p>Free assembly on the "IntellectDesk" study table. Create your focused learning space!</p>
+                <p>Introducing the "IntellectDesk" – your dedicated space for focused learning and productivity. The IntellectDesk combines sleek design with functional features, offering ample storage with drawers and shelves for organized study sessions. Crafted from durable materials, its spacious tabletop accommodates your books, laptop, and study essentials. Elevate your workspace with the IntellectDesk, where form meets function to inspire a studious environment.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Product 5 -->
+    <div class="diningtable-container product-container">
+        <div class="diningtable-image product-image">
+            <img src="dinning table.jpg" alt="DiningTable">
+            <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+        </div>
+        <div class="product-details">
+            <h2>DiningTable</h2>
+            <p class="price">&#8377;30000 </p>
+            <p class="new-price">&#8377;29000</p>
+            <p class="discount">20% off</p>
+            <div class="offers">Special Offers</div>
+            <div class="scrollable">
+                <p>Energy-efficient LED included with the "GastronomeDine" dining table. Limited stock available!</p>
+                <p>Introducing the "IntellectDesk" – your dedicated space for focused learning and productivity. The IntellectDesk combines sleek design with functional features, offering ample storage with drawers and shelves for organized study sessions. Crafted from durable materials, its spacious tabletop accommodates your books, laptop, and study essentials. Elevate your workspace with the IntellectDesk, where form meets function to inspire a studious environment.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Product 6 -->
+    <div class="Bed-container product-container">
+        <div class="Bed-image product-image">
+            <img src="Bed.jpg" alt="Bed">
+            <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+        </div>
+        <div class="product-details">
+            <h2>Bed</h2>
+            <p class="price">&#8377;40000</p>
+            <p class="new-price">&#8377;38500</p>
+            <p class="discount">25% off</p>
+            <div class="offers">Special Offers</div>
+            <div class="scrollable">
+                <p>Get extra storage with easy assembly on the "SlumberHaven" bed. Limited time offer!</p>
+                <p>Introducing the "SlumberHaven" bed – a sanctuary of comfort and style. Immerse yourself in the plush luxury of SlumberHaven, featuring a carefully crafted frame and a sumptuous mattress for a rejuvenating night's sleep. The elegant design seamlessly blends with any bedroom decor, while the sturdy construction ensures durability. Transform your bedroom into a haven of relaxation with the SlumberHaven bed – where sweet dreams meet exceptional design.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+         Made With &hearts; By Comfyhomes
+         <br>
+         <p>"Transforming spaces,crafting comfort"</p>
+         <p>Contect us: +91 9482749234/+91 9573727468</p>
+         <p>Email:comfyhomes@gmail.com</p>
+        </div>
+     <p>Like What You See? Follow Us Here.</p>
+     <a href="#" class="fa fa-instagram"></a>
+     <a href="#" class="fa fa-facebook"></a>
+     <a href="#" class="fa fa-twitter"></a>
+    <a href="#" class="fa fa-linkedin"></a>
+         <div class="footer-bottom">
+         <p>&copy; ComfyHomes . All rights reserved.
+         </p>
+
+        </div>
+
+     </footer>
+</body>
+</html>

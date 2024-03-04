@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>About us</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+        *{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.navbar{
+    
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    height: 10vh;
+    width: 100%;
+    margin: auto;
+   
+    
+    
+   
+}
+.navbar .navlist{
+    display:flex;
+    gap:3rem;
+   
+}
+.navbar a:hover{
+    
+    color:black;
+
+}
+.navbar li a:hover{
+   color:rgb(239, 12, 12);
+   
+}
+.navbar .logo{
+    color:black;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-left: 3cm;
+
+}
+.navlist li{
+
+    list-style: none;
+
+}
+.navlist a{
+    text-decoration: none;
+    font-size: 1.1rem;
+    color:black;
+    margin-right: 4px;
+    
+}
+
+
+
+
+.heading{
+    width:90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin: 20px auto;
+
+}
+.heading h1{
+    font-size: 30px;
+    color: #000;
+    margin-bottom: 25px;
+    position: relative;
+    margin-top: none;
+}
+.heading h1::after{
+    content: "";
+    position: absolute;
+    width:100%;
+    height: 4px;
+    display: block;
+    margin:0 auto;
+    background-color:greenyellow;
+    margin-bottom: none;
+}
+.heading p{
+    font-size: 18px;
+    color:#FD7702;
+    font-size: larger;
+}
+
+
+body{
+    background-color: #f8f8f8; /* Light gray background for the body */
+        color: #333; /* Dark gray font color for the body text */
+        font-family: 'Poppins', sans-serif;
+     margin-left: 1cm;
+      padding: 0;
+        box-sizing: border-box;
+        
+}
+.hello{
+
+    display: flex;
+    margin-top: 1cm;
+}
+.box{
+    height: 15cm;
+    width: 17cm;
+   
+  margin-right: auto;
+  margin-left: 2cm;
+}
+.box p{
+    color:#666;
+
+}
+.image{
+    height: 17cm;
+    width: 17cm;
+    background-color:#3B5998;
+    margin-right: 1cm;
+    background-size: cover;
+    background-image: url(sofa.jpg);
+    
+}
+footer{
+    margin-top: 6rem;
+    width: auto;
+    text-align: center;
+    background-color:black;
+    color:white;
+    text-align: center;
+   justify-content: center;
+   font-family: 'Courier New', Courier, monospace;
+   font-weight: 100;
+   margin-bottom: auto;
+
+    
+}
+
+.fa {
+    padding: 5px;
+    font-size: 30px;
+    width: 40px;
+    text-align: center;
+    text-decoration: none;
+    margin: 2px 2px;
+  }
+  .fa:hover {
+    opacity: 0.3;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+.fa-instagram {
+    background:rgb(157, 36, 143);
+    color: white;
+}
+.fa-linkedin {
+    background: #007bb5;
+    color: white;
+  }
+    
+    .fa-twitter {
+      background: #55ACEE;
+      color: white;
+    }
+    .fa-linkedin {
+        background: #007bb5;
+        color: white;
+      }
+      .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #fff;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            z-index: 1;
+            opacity: 0;
+            transform: translateY(-20px);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .dropdown-content a {
+            display: block;
+            padding: 10px;
+            color: #333;
+            text-decoration: none;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #007BFF;
+            color: #fff;
+        }
+        .team-member {
+            display: flex;
+            margin-bottom: 20px;
+            align-items: center;
+            
+          }
+          .team-member h2{
+            margin-top: auto;
+           
+          }
+        
+
+.team-member img {
+    border-radius: 50%;
+    margin-right: 15px;
+    max-width: 100px; /* Adjust the max-width as needed */
+    height: auto;
+    text-align: center;
+    background-color: black;
+    color:white;
+    text-align: center;
+   justify-content: center;
+   font-family: 'Courier New', Courier, monospace;
+   font-weight: 100;
+   margin-bottom:auto;
+
+    
+}  
+.tag{
+    text-align: center;
+    margin-top: 2cm;
+}
+.index{
+    height: 10cm;
+    width:auto;
+    margin-top: 2cm;
+    margin-right: 1cm;
+}
+.index .photo{
+    height: 7cm;
+    width: 7cm;
+    margin-top: 1cm;
+     margin-left: 5cm;
+    background-image: url(s1.jpg);
+    background-size: cover;
+}
+.index .info{
+    height: 7cm;
+    width: 15cm;
+    margin-top: 1cm;
+    margin-right: 1cm;
+    margin-left: 2cm;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+.index{
+    display:flex;
+}
+.index h1{
+    text-align: center;
+
+}
+.index .info h2{
+    text-align: center;
+}
+.index .info p{
+    text-align: center;
+}
+.index .info h6{
+    text-align: center;
+}
+ .index .info h6::after{
+    content: "";
+    position: absolute;
+    width:15cm;
+    height: 4px;
+    display: block;
+    margin:5px;
+    background-color:black;
+    margin-bottom: none;
+
+}
+
+
+.index2{
+    height: 10cm;
+    width:auto;
+  
+    margin-top: 2cm;
+    margin-right: 1cm;
+}
+.index2 .photo2{
+    height: 7cm;
+    width: 7cm;
+    margin-top: 1cm;
+     margin-left: 5cm;
+    background-image: url(s2.jpg);
+    background-size: cover;
+}
+.index2 .info2{
+    height: 7cm;
+    width: 15cm;
+    margin-top: 1cm;
+    margin-right: 1cm;
+    margin-left: 2cm;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+.index2{
+    display:flex;
+}
+.index2 h1{
+    text-align: center;
+
+}
+.index2 .info2 h2{
+    text-align: center;
+}
+.index2 .info2 p{
+    text-align: center;
+}
+.index2 .info2 h6{
+    text-align: center;
+}
+ .index2 .info2 h6::after{
+    content: "";
+    position: absolute;
+    width:15cm;
+    height: 4px;
+    display: block;
+    margin:5px;
+    background-color:black;
+    margin-bottom: none;
+
+}
+.tag  h1::after{
+    content: "";
+    position: absolute;
+    width:38cm;
+    height: 4px;
+    display: block;
+    margin:0 auto;
+    background-color:greenyellow;
+    margin-bottom: none;
+
+}
+
+
+.icon.fa {
+    padding: 5px;
+    font-size: 30px;
+    width: 40px;
+    text-align: center;
+    text-decoration: none;
+    margin: 2px 2px;
+  }
+  .icon.fa:hover {
+    opacity: 0.3;
+}
+
+.icon.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+.icon.fa-instagram {
+    background:rgb(239, 46, 165);
+    color: white;
+}
+
+    
+.icon.fa-linkedin {
+    background: #007bb5;
+    color: white;
+  }
+    
+    .icon.fa-twitter {
+      background: #55ACEE;
+      color: white;
+    }
+    
+   
+
+
+    </style>
+</head>
+<body> 
+    <header>
+      
+        <div class="navbar">
+            <div class="logo">ComfyHomes</div>
+            <ul class="navlist">
+                <li class="active"><a href="comfy.html"><i class="fa fa-home" aria-hidden="true"></i> Homes</a></li>
+                <li class="dropdown">
+                    <a href="#"><i class="fa fa-angle-down" aria-hidden="true"></i>Product</a>
+                    <div class="dropdown-content">
+                        <a href="bed.html">Bed</a>
+                        <a href="sofa.html">Sofa</a>
+                        <a href="chair.html">Chair</a>
+                        <a href="diningtable.html">Dining Table</a>
+                        <a href="coffee.html">Coffeetable</a>
+                        <a href="woodenshelves.html">woodenshelves</a>
+                       
+                    </div>
+                </li>
+                <li><a href="blog.html"><i class="fa fa-rss-square" aria-hidden="true"></i>Blog</a></li>
+                <li><a href="about.html"><i class="fa fa-info" aria-hidden="true"></i>About Us</a></li>
+            </ul>
+        </div>
+    </header>
+    <div class="heading">
+        <h1>About Us</h1>
+       <p>Welcome to ComfyHomes<br>
+        Where Comfort Meets Style in Every Piece
+        
+        </p>
+    </div>  
+   <section class="hello">
+    <div class="image"></div>
+    <div class="box">
+      <h1>  ComfyHomes - Where Style Meets Comfort!</h1>
+        
+        At ComfyHomes, we believe that your home is a reflection of your personality and individuality. Our mission is to provide you with a curated selection of high-quality furniture that not only enhances the aesthetics of your living spaces but also ensures maximum comfort and functionality.<br>
+       <h1>Our Story</h1> 
+        Established in 2014, has been a trusted name ComfyHomes in the furniture industry for 9 years. What started as a small family-owned business has grown into a premier destination for furniture enthusiasts. Our journey has been fueled by a passion for design, a commitment to quality, and a dedication to customer satisfaction.<br>
+        <h1>Visit Our Showroom</h1>
+        We invite you to explore our extensive showroom located at viman nagar pune. Immerse yourself in a world of stylish and comfortable furniture that complements your lifestyle. Whether you're furnishing a new home or updating your existing space, ComfyHomes is here to inspire and assist you.
+        
+        Thank you for choosing ComfyHomes. We look forward to being a part of your home furnishing journey!<br>
+        
+        Email:comfyhomes@gmail.com<br>
+        [Contact Us: +91 9482749234 /+91 9573727468]<br>
+        Location: ComfyHomes Furniture Store Viman nagar Pune Maharashtra 411047. 
+           
+
+
+    </div>
+    
+   
+
+   </section>
+   <div class="tag"><h1>Our Team</h1></div>
+   <div class="index">
+    <div class="photo"></div>
+    <div class="info">
+        <h2>Shruti Sawant</h2>
+        <p>CEO & Founder</p>
+        <h5>Shruti Sawant, a visionary entrepreneur and founder of ComfyHomes Furniture Company, brings a wealth of experience and passion to the world of interior design. With a keen eye for aesthetics and a commitment to quality, Shruti has been instrumental in shaping ComfyHomes into a trusted name in the furniture industry. His dedication to creating stylish and comfortable living spaces has driven the company's success, and his innovative approach to design continues to inspire both the team and customers alike. Shruti's leadership has been pivotal in establishing ComfyHomes as a go-to destination for those seeking not just furniture, but an elevated lifestyle.</h5> 
+        <h6 style="color:#FD7702">shrutisawant.comfyHomes@gmail.com</h6> 
+         <br>
+       <div class="icon" style="text-align: center;">
+        <a href="#" class="fa fa-twitter"></a>
+        <a href="#" class="fa fa-linkedin"></a>
+        <a href="#" class="fa fa-instagram"></a>
+        <a href="#" class="fa fa-facebook"></a>
+      
+       </div>
+
+      
+
+
+        
+    </div>
+   
+
+   </div>
+
+   <div class="index2">
+    <div class="photo2"></div>
+    <div class="info2">
+        <h2>Shruti Shevate</h2>
+        <p>CFO & Founder</p>
+        <h5>Shruti Shevate, the esteemed founder and Chief Financial Officer (CFO) of ComfyHomes Furniture Company, brings a unique blend of entrepreneurial spirit and financial acumen to the forefront of the organization. With an unwavering commitment to transforming living spaces into havens of comfort and style, Shruti's visionary leadership has been instrumental in establishing ComfyHomes as a leading name in the furniture industry. As the CFO, her strategic financial insights have played a pivotal role in the company's growth and stability. Shruti's passion for design, coupled with her financial expertise, continues to drive ComfyHomes towards new heights of success.</h5>
+         <h6  style="color:#FD7702">shrutishevate.comfyhome@gmail.com</h6>
+         <br>
+         <div class="icon" style="text-align: center;">
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="#" class="fa fa-linkedin"></a>
+            <a href="#" class="fa fa-instagram"></a>
+            <a href="#" class="fa fa-facebook"></a>
+           
+            
+           </div>
+    
+      
+
+
+        
+    </div>
+   
+
+   </div>
+
+   
+   
+
+
+    
+    <footer>
+        <div class="footer-content">
+         Made With &hearts; By Comfyhomes
+         <br>
+         <p>"Transforming spaces,crafting comfort"</p>
+         <p>Contect us: +91 9482749234/+91 9573727468</p>
+         <p>Email:comfyhomes@gmail.com</p>
+         
+        </div>
+     <p>Like What You See? Follow Us Here.</p>
+     <a href="#" class="fa fa-instagram"></a>
+     <a href="#" class="fa fa-facebook"></a>
+     <a href="#" class="fa fa-twitter"></a>
+    <a href="#" class="fa fa-linkedin"></a>
+        
+
+        
+        <div class="footer-bottom">
+         <p>&copy; ComfyHomes . All rights reserved.
+         </p>
+
+        </div>
+
+     </footer>
+
+
+    
+</body>
+</html>

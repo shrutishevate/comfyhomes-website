@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BloG</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.navbar{
+    
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    height: 10vh;
+    width: 90%;
+    margin: auto;
+   
+   
+    
+    
+   
+}
+.navbar .navlist{
+    display:flex;
+    gap:3rem;
+   
+}
+.navbar a:hover{
+    
+    color:black;
+
+}
+.navbar li a:hover{
+   color:rgb(239, 12, 12);
+   
+}
+.navbar .logo{
+    color:black;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-left: 3cm;
+
+}
+.navlist li{
+
+    list-style: none;
+
+}
+.navlist a{
+    text-decoration: none;
+    font-size: 1.1rem;
+    color:black;
+    margin-right: 4px;
+    
+}
+.dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #fff;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            z-index: 1;
+            opacity: 0;
+            transform: translateY(-20px);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .dropdown-content a {
+            display: block;
+            padding: 10px;
+            color: #333;
+            text-decoration: none;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #007BFF;
+            color: #fff;
+        }
+        footer{
+    margin-top: 6rem;
+    text-align: center;
+    background-color:black;
+    color:white;
+    text-align: center;
+   justify-content: center;
+   font-family: 'Courier New', Courier, monospace;
+   font-weight: 100;
+   margin-bottom: auto;
+
+    
+}
+
+.fa {
+    padding: 5px;
+    font-size: 30px;
+    width: 40px;
+    text-align: center;
+    text-decoration: none;
+    margin: 2px 2px;
+  }
+  .fa:hover {
+    opacity: 0.3;
+}
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+.fa-instagram {
+    background:rgb(157, 36, 143);
+    color: white;
+}
+.fa-linkedin {
+    background: #007bb5;
+    color: white;
+  }
+    
+    .fa-twitter {
+      background: #55ACEE;
+      color: white;
+    }
+    .fa-linkedin {
+        background: #007bb5;
+        color: white;
+      }
+      
+.blog h1{
+    text-align: center;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+ .blog{
+    height: 3cm;
+    width: auto;
+    margin-top: 1.5cm;
+ }
+ .blog h1::after{
+    content: "";
+    position: absolute;
+    width:95%;
+    height: 4px;
+    display: block;
+    margin:5px;
+    background-color:black;
+    margin-bottom: none;
+    margin-left: 1cm;
+    margin-right: 1cm;
+
+}
+
+.index .photo{
+    height: 8cm;
+    width: 10cm;
+    background-color: chartreuse;
+    margin-left: 3cm;
+    margin-top: 1cm;
+    background-image: url(post1.jpg);
+    background-size: cover;
+    border-radius: 20px;
+}
+
+.index .photo2{
+    height: 8cm;
+    width: 10cm;
+    background-color: chartreuse;
+    margin-left: 2cm;
+    margin-top: 1cm;
+    background-image: url(post2.jpg);
+    background-size: cover;
+    border-radius: 20px;
+}
+.index .photo3{
+    height: 8cm;
+    width: 10cm;
+    background-color: chartreuse;
+    margin-left: 2cm;
+    margin-top:1cm;
+    background-image: url(post3.jpg);
+    background-size: cover;
+    border-radius: 20px;
+}
+.index2 .box{
+    height: 6cm;
+    width: 10cm;
+    margin-left: 3cm;
+    margin-top: 5px;
+    
+}
+.index2 .box2{
+    height: 6cm;
+    width: 10cm;
+    margin-left: 2cm;
+    margin-top: 5px;
+    
+}
+.index2 .box3{
+    height: 6cm;
+    width: 10cm;
+    margin-left: 2cm;
+    margin-top: 5px;
+    
+}
+
+.index2{
+    display:flex;
+}    
+
+.index{
+    display:flex;
+
+}
+h2 {
+    color: #333;
+}
+
+.date {
+    color: #888;
+    font-size: 0.9em;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+    display: block;
+    margin-top: 10px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+ 
+
+
+
+</style>
+</head>
+<body>
+    <header>
+      
+        <div class="navbar">
+            <div class="logo">ComfyHomes</div>
+            <ul class="navlist">
+                <li class="active"><a href="comfy.html"><i class="fa fa-home" aria-hidden="true"></i> Homes</a></li>
+                <li class="dropdown">
+                    <a href="#"><i class="fa fa-angle-down" aria-hidden="true"></i>Product</a>
+                    <div class="dropdown-content">
+                        <a href="bed.html">Bed</a>
+                        <a href="sofa.html">Sofa</a>
+                        <a href="chair.html">Chair</a>
+                        <a href="diningtable.html">Dining Table</a>
+                        <a href="coffee.html">Coffeetable</a>
+                        <a href="woodenshelves.html">woodenshelves</a>
+                       
+                    </div>
+                </li>
+                <li><a href="blog.html"><i class="fa fa-rss-square" aria-hidden="true"></i>Blog</a></li>
+                <li><a href="about.html"><i class="fa fa-info" aria-hidden="true"></i>About Us</a></li>
+            </ul>
+        </div>
+    </header>
+    <div class="blog">
+        <h1>Treading Post</h1>
+      
+
+    </div>
+  <div class="index">
+    <div class="photo"></div>
+    <div class="photo2"></div>
+    <div class="photo3"></div>
+
+
+  </div>
+  <div class="index2">
+    <div class="box">
+        <article style="text-align: center;">
+            <h2 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Spotlight on Popular Products:</h2><br>
+            <p style="font-family:cursive">Choose some best-selling or popular furniture items and write in-depth spotlights on each. Include customer testimonials, and explain how these pieces can fit into different styles of homes.</p><br>
+            <p class="date">Published on january 18, 2024</p>
+            <p style="color: #FD7702;">&copy;ComfyHomes</p>
+        </article>
+
+    </div>
+    <div class="box2">
+        <article style="text-align: center;">
+            <h2 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">DIY Furniture Projects:</h2><br>
+            <p style="font-family:cursive">Share creative and simple do-it-yourself furniture projects that readers can try at home. This could involve repurposing or upcycling existing furniture items to give them a new life.</p><br>
+            <br>
+            <p class="date">Published on February 1, 2024</p>
+            <p style="color: #FD7702;">&copy;ComfyHomes</p>
+        </article>
+    </div>
+    <div class="box3">
+        <article style="text-align: center;">
+            <h2 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Introduce Your Latest Collections:</h2><br>
+            <p style="font-family:cursive">Start by introducing your newest furniture collections. Highlight the unique features, materials used, and design inspirations behind each piece. Include high-quality images to give readers a visual sense of the products.</p><br>
+            <p class="date">Published on February 19, 2024</p>
+            <p style="color: #FD7702;">&copy;ComfyHomes</p>
+        </article>
+    </div>
+  </div>
+
+
+
+    <footer>
+        <div class="footer-content">
+         Made With &hearts; By Comfyhomes
+         <br>
+         <p>"Transforming spaces,crafting comfort"</p>
+         <p>Contect us: +91 9482749234/+91 9573727468</p>
+         <p>Email:comfyhomes@gmail.com</p>
+        </div>
+     <p>Like What You See? Follow Us Here.</p>
+       <a href="#" class="fa fa-instagram"></a>
+             <a href="#" class="fa fa-facebook"></a>
+             <a href="#" class="fa fa-twitter"></a>
+            <a href="#" class="fa fa-linkedin"></a>
+        
+
+        
+        <div class="footer-bottom">
+         <p>&copy; ComfyHomes . All rights reserved.
+         </p>
+
+        </div>
+
+     </footer>
+    
+</body>
+</html>
